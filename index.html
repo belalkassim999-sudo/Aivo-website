@@ -475,7 +475,148 @@ Aivo will review your request and get back to you.
 
 </section>
 
+<section id="demo" style="background:#080c20;">
 
+<h2 class="section-title">
+🤖 Try Aivo AI Receptionist
+</h2>
+
+<p class="section-text">
+See how an AI receptionist could answer customers for your business.
+</p>
+
+<div style="
+max-width:650px;
+margin:auto;
+background:#111936;
+border:1px solid #293762;
+border-radius:25px;
+padding:25px;
+">
+
+<div id="chat" style="
+height:280px;
+overflow-y:auto;
+padding:10px;
+margin-bottom:15px;
+">
+
+<div style="
+background:#202b50;
+padding:12px 15px;
+border-radius:15px;
+margin-bottom:10px;
+">
+🤖 Hi! I'm Aivo's AI receptionist. Ask me about hours, prices, location, or booking.
+</div>
+
+</div>
+
+<div style="display:flex;gap:10px;">
+
+<input
+id="userInput"
+type="text"
+placeholder="Ask Aivo something..."
+style="
+flex:1;
+padding:15px;
+border-radius:12px;
+border:1px solid #35446e;
+background:#060a19;
+color:white;
+font-size:16px;
+">
+
+<button
+onclick="askAivo()"
+style="
+padding:15px 20px;
+border:0;
+border-radius:12px;
+background:linear-gradient(90deg,#7c4dff,#00bfff);
+color:white;
+font-weight:bold;
+">
+Send
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function askAivo(){
+
+const input = document.getElementById("userInput");
+const chat = document.getElementById("chat");
+
+const message = input.value.trim();
+
+if(!message) return;
+
+chat.innerHTML += `
+<div style="
+background:#172142;
+padding:12px 15px;
+border-radius:15px;
+margin-bottom:10px;
+text-align:right;
+">
+You: ${message}
+</div>
+`;
+
+let answer =
+"Thanks for your question! Aivo can help with that.";
+
+const text = message.toLowerCase();
+
+if(text.includes("hour") || text.includes("open")){
+answer =
+"We're open Monday–Saturday from 9 AM to 7 PM.";
+}
+
+else if(text.includes("price") || text.includes("cost") || text.includes("haircut")){
+answer =
+"Our standard haircut is $30. You can ask us about other services too!";
+}
+
+else if(text.includes("where") || text.includes("location") || text.includes("address")){
+answer =
+"We're located at 123 Main Street. This is a demo location.";
+}
+
+else if(text.includes("book") || text.includes("appointment")){
+answer =
+"Absolutely! I can help you book an appointment. What day and time would you prefer?";
+}
+
+setTimeout(function(){
+
+chat.innerHTML += `
+<div style="
+background:#202b50;
+padding:12px 15px;
+border-radius:15px;
+margin-bottom:10px;
+">
+🤖 ${answer}
+</div>
+`;
+
+chat.scrollTop = chat.scrollHeight;
+
+},400);
+
+input.value="";
+
+}
+
+</script>
 <footer>
 
 ✦ AIVO — Future-Ready AI
