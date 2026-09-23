@@ -6,204 +6,240 @@
 <title>Aivo — Future-Ready AI</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,sans-serif;
+background:#050816;
+color:white;
+line-height:1.6;
 }
 
-html {
-  scroll-behavior: smooth;
+nav{
+position:sticky;
+top:0;
+z-index:10;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,8,22,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #202746;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #050816;
-  color: white;
-  line-height: 1.6;
+.logo{
+font-size:30px;
+font-weight:800;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(5,8,22,.9);
-  backdrop-filter: blur(12px);
+.logo span{
+color:#7c5cff;
 }
 
-.logo {
-  font-size: 32px;
-  font-weight: 800;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-.logo span {
-  color: #7c5cff;
+.hero{
+min-height:88vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:
+radial-gradient(circle at 50% 20%,#263da5,transparent 40%),
+linear-gradient(135deg,#080b2c,#075eea,#08baf5);
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
+.badge{
+display:inline-block;
+padding:10px 20px;
+border:1px solid #65d9ff;
+border-radius:50px;
+color:#a8ecff;
+margin-bottom:25px;
 }
 
-.hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 70px 20px;
-  background:
-    radial-gradient(circle at 50% 20%, #263da5, transparent 40%),
-    linear-gradient(135deg,#080b2c,#075eea,#08baf5);
+h1{
+font-size:clamp(55px,12vw,105px);
+line-height:.95;
+margin-bottom:25px;
 }
 
-.badge {
-  display: inline-block;
-  padding: 10px 22px;
-  border: 1px solid #65d9ff;
-  border-radius: 50px;
-  color: #a8ecff;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
+.gradient{
+background:linear-gradient(90deg,#fff,#6ee7ff,#9b7cff);
+-webkit-background-clip:text;
+color:transparent;
 }
 
-h1 {
-  font-size: clamp(55px, 12vw, 105px);
-  line-height: .95;
-  margin-bottom: 25px;
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:20px;
+color:#e4eaff;
 }
 
-.gradient {
-  background: linear-gradient(90deg,#fff,#6ee7ff,#9b7cff);
-  -webkit-background-clip: text;
-  color: transparent;
+.buttons{
+margin-top:35px;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 20px;
-  color: #e4eaff;
+.btn{
+display:inline-block;
+padding:16px 30px;
+margin:8px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+font-size:17px;
 }
 
-.buttons {
-  margin-top: 35px;
+.primary{
+color:white;
+background:linear-gradient(90deg,#7c4dff,#00bfff);
 }
 
-.btn {
-  display: inline-block;
-  padding: 16px 30px;
-  margin: 8px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
+.secondary{
+color:white;
+border:1px solid #6575a8;
 }
 
-.primary {
-  color: white;
-  background: linear-gradient(90deg,#7c4dff,#00bfff);
-  box-shadow: 0 10px 35px rgba(0,180,255,.3);
+section{
+padding:90px 7%;
 }
 
-.secondary {
-  color: white;
-  border: 1px solid #6575a8;
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:15px;
 }
 
-section {
-  padding: 90px 7%;
+.section-text{
+text-align:center;
+color:#aeb9d5;
+max-width:700px;
+margin:0 auto 50px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 45px;
-  margin-bottom: 15px;
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
 }
 
-.section-text {
-  text-align: center;
-  color: #aeb9d5;
-  max-width: 700px;
-  margin: 0 auto 50px;
+.card{
+padding:35px;
+border-radius:24px;
+background:linear-gradient(145deg,#111936,#091027);
+border:1px solid #26365f;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
+.icon{
+font-size:40px;
+margin-bottom:15px;
 }
 
-.card {
-  padding: 35px;
-  border-radius: 24px;
-  background: linear-gradient(145deg,#111936,#091027);
-  border: 1px solid #26365f;
-  transition: .3s;
+.card h3{
+font-size:24px;
+margin-bottom:10px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  border-color: #6c7cff;
+.card p{
+color:#aeb9d5;
 }
 
-.icon {
-  font-size: 40px;
-  margin-bottom: 15px;
+/* FORM */
+
+.form-section{
+background:#080c20;
 }
 
-.card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.form-box{
+max-width:650px;
+margin:auto;
+padding:35px;
+border-radius:25px;
+background:linear-gradient(145deg,#111936,#091027);
+border:1px solid #293762;
 }
 
-.card p {
-  color: #aeb9d5;
+.form-box input,
+.form-box select,
+.form-box textarea{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border-radius:12px;
+border:1px solid #35446e;
+background:#060a19;
+color:white;
+font-size:16px;
 }
 
-.cta {
-  text-align: center;
-  background: linear-gradient(135deg,#101b55,#063d83);
+.form-box textarea{
+height:120px;
+resize:vertical;
 }
 
-footer {
-  text-align: center;
-  padding: 35px;
-  color: #8e9ab8;
-  background: #030511;
+.form-box button{
+width:100%;
+padding:17px;
+border:0;
+border-radius:13px;
+background:linear-gradient(90deg,#7c4dff,#00bfff);
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
 
-@media(max-width:750px) {
-  nav {
-    padding: 18px 5%;
-  }
+.note{
+margin-top:15px;
+font-size:13px;
+color:#8f9ab8;
+text-align:center;
+}
 
-  nav a {
-    display: none;
-  }
+footer{
+text-align:center;
+padding:35px;
+color:#8e9ab8;
+background:#030511;
+}
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:750px){
 
-  section {
-    padding: 70px 6%;
-  }
+nav{
+padding:18px 5%;
+}
 
-  .section-title {
-    font-size: 36px;
-  }
+nav a{
+display:none;
+}
 
-  .hero {
-    min-height: 85vh;
-  }
+.cards{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 6%;
+}
+
+.section-title{
+font-size:36px;
+}
+
+.form-box{
+padding:25px;
+}
+
 }
 </style>
 </head>
@@ -211,123 +247,243 @@ footer {
 <body>
 
 <nav>
-  <div class="logo">✦ AI<span>VO</span></div>
-  <div>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
+
+<div class="logo">
+✦ AI<span>VO</span>
+</div>
+
+<div>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
+
+<!-- HERO -->
+
 <section class="hero">
-  <div>
-    <div class="badge">✦ FUTURE-READY AI AUTOMATION</div>
 
-    <h1>
-      Build a<br>
-      <span class="gradient">Smarter</span><br>
-      Business.
-    </h1>
+<div>
 
-    <p>
-      Aivo helps businesses automate customer service,
-      appointments, and repetitive work with AI.
-    </p>
+<div class="badge">
+✦ FUTURE-READY AI AUTOMATION
+</div>
 
-    <div class="buttons">
-      <a class="btn primary" href="#contact">Get Started →</a>
-      <a class="btn secondary" href="#services">Explore Aivo</a>
-    </div>
-  </div>
+<h1>
+Build a<br>
+<span class="gradient">Smarter</span><br>
+Business.
+</h1>
+
+<p>
+Aivo helps businesses automate customer service,
+appointments, and repetitive work with AI.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#contact">
+Get Started →
+</a>
+
+<a class="btn secondary" href="#services">
+Explore Aivo
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- SERVICES -->
 
 <section id="services">
-  <h2 class="section-title">AI That Works For You</h2>
 
-  <p class="section-text">
-    Save time, respond faster, and automate repetitive tasks
-    so you can focus on growing your business.
-  </p>
+<h2 class="section-title">
+AI That Works For You
+</h2>
 
-  <div class="cards">
+<p class="section-text">
+Save time, respond faster, and automate repetitive
+tasks so you can focus on growing your business.
+</p>
 
-    <div class="card">
-      <div class="icon">🤖</div>
-      <h3>AI Receptionist</h3>
-      <p>
-        Answer customer questions automatically and help
-        businesses stay available around the clock.
-      </p>
-    </div>
+<div class="cards">
 
-    <div class="card">
-      <div class="icon">📅</div>
-      <h3>Appointment Automation</h3>
-      <p>
-        Make scheduling easier by helping customers book
-        appointments without repetitive manual work.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">🤖</div>
+<h3>AI Receptionist</h3>
+<p>
+Answer customer questions automatically
+and help businesses stay available.
+</p>
+</div>
 
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>Business Automation</h3>
-      <p>
-        Automate repetitive tasks and create smoother
-        workflows for growing businesses.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">📅</div>
+<h3>Appointment Automation</h3>
+<p>
+Make scheduling easier and reduce
+repetitive manual work.
+</p>
+</div>
 
-  </div>
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Business Automation</h3>
+<p>
+Automate repetitive tasks and create
+smoother business workflows.
+</p>
+</div>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
-  <h2 class="section-title">Why Aivo?</h2>
 
-  <p class="section-text">
-    We build simple AI automation systems designed around
-    the way modern businesses work.
-  </p>
+<h2 class="section-title">
+Why Aivo?
+</h2>
 
-  <div class="cards">
+<p class="section-text">
+Simple AI automation designed around
+the way modern businesses work.
+</p>
 
-    <div class="card">
-      <div class="icon">🚀</div>
-      <h3>Save Time</h3>
-      <p>Let automation handle repetitive work.</p>
-    </div>
+<div class="cards">
 
-    <div class="card">
-      <div class="icon">💬</div>
-      <h3>Respond Faster</h3>
-      <p>Give customers quick answers when they need them.</p>
-    </div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Save Time</h3>
+<p>
+Let automation handle repetitive work.
+</p>
+</div>
 
-    <div class="card">
-      <div class="icon">📈</div>
-      <h3>Grow Smarter</h3>
-      <p>Spend more time on the parts of your business that matter.</p>
-    </div>
+<div class="card">
+<div class="icon">💬</div>
+<h3>Respond Faster</h3>
+<p>
+Give customers quick answers.
+</p>
+</div>
 
-  </div>
+<div class="card">
+<div class="icon">📈</div>
+<h3>Grow Smarter</h3>
+<p>
+Spend more time growing your business.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="cta" id="contact">
-  <h2 class="section-title">Ready for the Future?</h2>
 
-  <p class="section-text">
-    Let's build an AI-powered workflow for your business.
-  </p>
+<!-- GET STARTED FORM -->
 
-  <a class="btn primary"
-     href="mailto:hello@aivo-ai.com">
-     Contact Aivo →
-  </a>
+<section class="form-section" id="contact">
+
+<h2 class="section-title">
+Start With Aivo
+</h2>
+
+<p class="section-text">
+Tell us a little about your business and
+what you want to automate.
+</p>
+
+<div class="form-box">
+
+<form action="mailto:YOUR-EMAIL@example.com"
+method="post"
+enctype="text/plain">
+
+<input
+type="text"
+name="Name"
+placeholder="Your name"
+required>
+
+<input
+type="text"
+name="Business"
+placeholder="Business name"
+required>
+
+<input
+type="email"
+name="Email"
+placeholder="Your email"
+required>
+
+<select name="Business Type" required>
+
+<option value="">
+What type of business?
+</option>
+
+<option>Barbershop</option>
+<option>Restaurant</option>
+<option>Cleaning Business</option>
+<option>Real Estate</option>
+<option>Retail</option>
+<option>Other</option>
+
+</select>
+
+<select name="Automation" required>
+
+<option value="">
+What do you want to automate?
+</option>
+
+<option>Customer messages</option>
+<option>Appointment booking</option>
+<option>Phone calls</option>
+<option>Lead follow-up</option>
+<option>Other</option>
+
+</select>
+
+<textarea
+name="Message"
+placeholder="Tell us anything else about your business..."
+></textarea>
+
+<button type="submit">
+Send Request →
+</button>
+
+</form>
+
+<div class="note">
+Aivo will review your request and get back to you.
+</div>
+
+</div>
+
 </section>
+
 
 <footer>
-  <p>✦ AIVO — Future-Ready AI</p>
-  <p>© 2026 Aivo. All rights reserved.</p>
+
+✦ AIVO — Future-Ready AI
+
+<br><br>
+
+© 2026 Aivo. All rights reserved.
+
 </footer>
 
 </body>
