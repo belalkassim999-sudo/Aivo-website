@@ -549,72 +549,181 @@ Send
 
 <script>
 
-function askAivo(){
+<script>
+let bookingStep = 0;
+let booking = {
+  day: "",
+  time: "",
+  name: "",
+  contact: ""
+};
 
-const input = document.getElementById("userInput");
-const chat = document.getElementById("chat");
+function addMessage(text, user = false) {
+  const chat = document.getElementById("chat");
 
-const message = input.value.trim();
+  const box = document.createElement("div");
 
-if(!message) return;
+  box.style.cssText = `
+    padding:12px 15px;
+    border-radius:15px;
+    margin-bottom:10px;
+    ${user
+      ? "background:#172142;text-align:right;"
+      : "background:#202b50;"}
+  `;
 
-chat.innerHTML += `
-<div style="
-background:#172142;
-padding:12px 15px;
-border-radius:15px;
-margin-bottom:10px;
-text-align:right;
-">
-You: ${message}
-</div>
-`;
+  box.textContent = user ? "You: " + text : "🤖 " + text;
 
-let answer =
-"Thanks for your question! Aivo can help with that.";
-
-const text = message.toLowerCase();
-
-if(text.includes("hour") || text.includes("open")){
-answer =
-"We're open Monday–Saturday from 9 AM to 7 PM.";
+  chat.appendChild(box);
+  chat.scrollTop = chat.scrollHeight;
 }
 
-else if(text.includes("price") || text.includes("cost") || text.includes("haircut")){
-answer =
-"Our standard haircut is $30. You can ask us about other services too!";
+function askAivo() {
+  const input = document.getElementById("userInput");
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  addMessage(message, true);
+  input.value = "";
+
+  const text = message.toLowerCase();
+
+  // BOOKING FLOW
+  if (bookingStep === 1) {
+    booking.day = message;
+    bookingStep = 2;
+
+    setTimeout(() => {
+      addMessage("Great! What time would you like?");
+    }, 400);
+
+    return;
+  }
+
+  if (bookingStep === 2) {
+    booking.time = message;
+    bookingStep = 3;
+
+    setTimeout(() => {
+      addMessage(
+        "Perfect! " +
+        booking.day +
+        " at " +
+        booking.time +
+        ". What is your name?"
+      );
+    }, 400);
+
+    return;
+  }
+
+  if (bookingStep === 3) {
+    booking.name = message;
+    bookingStep = 4;
+
+    setTimeout(() => {
+      addMessage("Thanks, " + booking.name + "! What is your phone number or email?");
+    }, 400);
+
+    return;
+  }
+
+  if (bookingStep === 4) {
+    booking.contact = message;
+    bookingStep = 5;
+
+    setTimeout(() => {
+      addMessage(
+        "✅ Thanks, " +
+        booking.name +
+        "! Your appointment request is ready.\n\n" +
+        "📅 Day: " + booking.day + "\n" +
+        "🕐 Time: " + booking.time + "\n" +
+        "👤 Name: " + booking.name + "\n" +
+        "📞 Contact: " + booking.contact + "\n\n" +
+        "The business will confirm the appointment."
+      );
+    }, 400);
+
+    return;
+  }
+
+  // NORMAL QUESTIONS
+
+  let answer =
+    "I can help with hours, prices, location, services, or appointments.";
+
+  if (
+    text.includes("book") ||
+    text.includes("appointment") ||
+    text.includes("schedule")
+  ) {
+    booking = {
+      day: "",
+      time: "",
+      name: "",
+      contact: ""
+    };
+
+    bookingStep = 1;
+
+    answer = "Absolutely! What day would you like your appointment?";
+  }
+
+  else if (
+    text.includes("hour") ||
+    text.includes("open") ||
+    text.includes("close")
+  ) {
+    answer = "We're open Monday–Saturday from 9 AM to 7 PM.";
+  }
+
+  else if (
+    text.includes("price") ||
+    text.includes("cost") ||
+    text.includes("haircut")
+  ) {
+    answer = "Our standard haircut is $30. Ask me about booking when you're ready.";
+  }
+
+  else if (
+    text.includes("where") ||
+    text.includes("location") ||
+    text.includes("address")
+  ) {
+    answer =
+      "We're located at 123 Main Street. This is a demo location.";
+  }
+
+  else if (
+    text.includes("service") ||
+    text.includes("services")
+  ) {
+    answer =
+      "We offer haircuts and barber services. I can also help you request an appointment.";
+  }
+
+  else if (
+    text.includes("hello") ||
+    text.includes("hi")
+  ) {
+    answer =
+      "Hi! 👋 I'm Aivo's AI receptionist. How can I help you today?";
+  }
+
+  setTimeout(() => {
+    addMessage(answer);
+  }, 400);
 }
 
-else if(text.includes("where") || text.includes("location") || text.includes("address")){
-answer =
-"We're located at 123 Main Street. This is a demo location.";
-}
-
-else if(text.includes("book") || text.includes("appointment")){
-answer =
-"Absolutely! I can help you book an appointment. What day and time would you prefer?";
-}
-
-setTimeout(function(){
-
-chat.innerHTML += `
-<div style="
-background:#202b50;
-padding:12px 15px;
-border-radius:15px;
-margin-bottom:10px;
-">
-🤖 ${answer}
-</div>
-`;
-
-chat.scrollTop = chat.scrollHeight;
-
-},400);
-
-input.value="";
-
-}
+// Press Enter to send
+document.getElementById("userInput").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    askAivo();
+  }
+});
+</script>
 
 </script>
 <footer>
