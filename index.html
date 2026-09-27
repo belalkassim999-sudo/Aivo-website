@@ -7,313 +7,312 @@
 <title>Aivo AI — Future-Ready</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:Arial,sans-serif;
-  background:#050816;
-  color:white;
-  line-height:1.6;
+body {
+  font-family: Arial, sans-serif;
+  background: #050816;
+  color: white;
+  line-height: 1.6;
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  padding:20px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(5,8,22,.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #202746;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5,8,22,.95);
+  border-bottom: 1px solid #202746;
 }
 
-.logo{
-  font-size:30px;
-  font-weight:800;
+.logo {
+  font-size: 30px;
+  font-weight: 800;
 }
 
-.logo span{
-  color:#7c5cff;
+.logo span {
+  color: #7c5cff;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-.hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:70px 20px;
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
   background:
-    radial-gradient(circle at 50% 20%,#263da5,transparent 40%),
+    radial-gradient(circle at 50% 20%, #263da5, transparent 40%),
     linear-gradient(135deg,#080b2c,#075eea,#08baf5);
 }
 
-.badge{
-  display:inline-block;
-  padding:10px 20px;
-  border:1px solid #65d9ff;
-  border-radius:50px;
-  color:#a8ecff;
-  margin-bottom:25px;
+.badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #65d9ff;
+  border-radius: 50px;
+  color: #a8ecff;
+  margin-bottom: 25px;
 }
 
-h1{
-  font-size:clamp(55px,12vw,105px);
-  line-height:.95;
-  margin-bottom:25px;
+h1 {
+  font-size: clamp(55px,12vw,105px);
+  line-height: .95;
+  margin-bottom: 25px;
 }
 
-.gradient{
-  background:linear-gradient(90deg,#fff,#6ee7ff,#9b7cff);
-  -webkit-background-clip:text;
-  color:transparent;
+.gradient {
+  background: linear-gradient(90deg,#fff,#6ee7ff,#9b7cff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.hero p{
-  max-width:700px;
-  margin:auto;
-  font-size:20px;
-  color:#e4eaff;
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 20px;
+  color: #e4eaff;
 }
 
-.buttons{
-  margin-top:35px;
+.buttons {
+  margin-top: 35px;
 }
 
-.btn{
-  display:inline-block;
-  padding:16px 30px;
-  margin:8px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:17px;
+.btn {
+  display: inline-block;
+  padding: 16px 30px;
+  margin: 8px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.primary{
-  color:white;
-  background:linear-gradient(90deg,#7c4dff,#00bfff);
+.primary {
+  color: white;
+  background: linear-gradient(90deg,#7c4dff,#00bfff);
 }
 
-.secondary{
-  color:white;
-  border:1px solid #6575a8;
+.secondary {
+  color: white;
+  border: 1px solid #6575a8;
 }
 
-section{
-  padding:90px 7%;
+section {
+  padding: 90px 7%;
 }
 
-.section-title{
-  text-align:center;
-  font-size:45px;
-  margin-bottom:15px;
+.section-title {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 15px;
 }
 
-.section-text{
-  text-align:center;
-  color:#aeb9d5;
-  max-width:700px;
-  margin:0 auto 50px;
+.section-text {
+  text-align: center;
+  color: #aeb9d5;
+  max-width: 700px;
+  margin: 0 auto 50px;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  max-width:1100px;
-  margin:auto;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.card{
-  padding:35px;
-  border-radius:24px;
-  background:linear-gradient(145deg,#111936,#091027);
-  border:1px solid #26365f;
+.card {
+  padding: 35px;
+  border-radius: 24px;
+  background: linear-gradient(145deg,#111936,#091027);
+  border: 1px solid #26365f;
 }
 
-.icon{
-  font-size:40px;
-  margin-bottom:15px;
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
-.card h3{
-  font-size:24px;
-  margin-bottom:10px;
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.card p{
-  color:#aeb9d5;
+.card p {
+  color: #aeb9d5;
 }
 
-.form-section{
-  background:#080c20;
+.form-section {
+  background: #080c20;
 }
 
-.form-box{
-  max-width:650px;
-  margin:auto;
-  padding:35px;
-  border-radius:25px;
-  background:linear-gradient(145deg,#111936,#091027);
-  border:1px solid #293762;
+.form-box {
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 25px;
+  background: linear-gradient(145deg,#111936,#091027);
+  border: 1px solid #293762;
 }
 
 .form-box input,
 .form-box select,
-.form-box textarea{
-  width:100%;
-  padding:16px;
-  margin-bottom:15px;
-  border-radius:12px;
-  border:1px solid #35446e;
-  background:#060a19;
-  color:white;
-  font-size:16px;
+.form-box textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #35446e;
+  background: #060a19;
+  color: white;
+  font-size: 16px;
 }
 
-.form-box textarea{
-  height:120px;
-  resize:vertical;
+.form-box textarea {
+  height: 120px;
 }
 
-.form-box button{
-  width:100%;
-  padding:17px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(90deg,#7c4dff,#00bfff);
-  color:white;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+.form-box button {
+  width: 100%;
+  padding: 17px;
+  border: 0;
+  border-radius: 13px;
+  background: linear-gradient(90deg,#7c4dff,#00bfff);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
 }
 
-.note{
-  margin-top:15px;
-  font-size:13px;
-  color:#8f9ab8;
-  text-align:center;
+.note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #8f9ab8;
+  text-align: center;
 }
 
-/* AI CHAT */
+/* CHAT */
 
-.chat-box{
-  max-width:650px;
-  margin:auto;
-  background:#111936;
-  border:1px solid #293762;
-  border-radius:25px;
-  padding:25px;
+.chat-box {
+  max-width: 650px;
+  margin: auto;
+  background: #111936;
+  border: 1px solid #293762;
+  border-radius: 25px;
+  padding: 25px;
 }
 
-#chat{
-  height:300px;
-  overflow-y:auto;
-  padding:10px;
-  margin-bottom:15px;
+#chat {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
-.chat-input{
-  display:flex;
-  gap:10px;
+.message {
+  padding: 12px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  white-space: pre-line;
 }
 
-.chat-input input{
-  flex:1;
-  padding:15px;
-  border-radius:12px;
-  border:1px solid #35446e;
-  background:#060a19;
-  color:white;
-  font-size:16px;
+.bot {
+  background: #202b50;
 }
 
-.chat-input button{
-  padding:15px 20px;
-  border:0;
-  border-radius:12px;
-  background:linear-gradient(90deg,#7c4dff,#00bfff);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
+.user {
+  background: #172142;
+  text-align: right;
 }
 
-.message{
-  padding:12px 15px;
-  border-radius:15px;
-  margin-bottom:10px;
-  white-space:pre-line;
+.chat-input {
+  display: flex;
+  gap: 10px;
 }
 
-.bot{
-  background:#202b50;
+#userInput {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #35446e;
+  background: #060a19;
+  color: white;
+  font-size: 16px;
 }
 
-.user{
-  background:#172142;
-  text-align:right;
+#sendButton {
+  padding: 15px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#7c4dff,#00bfff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-footer{
-  text-align:center;
-  padding:35px;
-  color:#8e9ab8;
-  background:#030511;
+#sendButton:active {
+  transform: scale(.97);
 }
 
-@media(max-width:750px){
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #8e9ab8;
+  background: #030511;
+}
 
-  nav{
-    padding:18px 5%;
+@media(max-width:750px) {
+
+  nav {
+    padding: 18px 5%;
   }
 
-  nav a{
-    display:none;
+  nav a {
+    display: none;
   }
 
-  .cards{
-    grid-template-columns:1fr;
+  .cards {
+    grid-template-columns: 1fr;
   }
 
-  section{
-    padding:70px 6%;
+  section {
+    padding: 70px 6%;
   }
 
-  .section-title{
-    font-size:36px;
+  .section-title {
+    font-size: 36px;
   }
 
-  .form-box{
-    padding:25px;
+  .form-box {
+    padding: 25px;
   }
 
-  .chat-input{
-    flex-direction:column;
+  .chat-input {
+    flex-direction: column;
   }
 }
 </style>
 </head>
 
 <body>
-
-<!-- NAVIGATION -->
 
 <nav>
 
@@ -434,25 +433,19 @@ the way modern businesses work.
 <div class="card">
 <div class="icon">🚀</div>
 <h3>Save Time</h3>
-<p>
-Let automation handle repetitive work.
-</p>
+<p>Let automation handle repetitive work.</p>
 </div>
 
 <div class="card">
 <div class="icon">💬</div>
 <h3>Respond Faster</h3>
-<p>
-Give customers quick answers.
-</p>
+<p>Give customers quick answers.</p>
 </div>
 
 <div class="card">
 <div class="icon">📈</div>
 <h3>Grow Smarter</h3>
-<p>
-Spend more time growing your business.
-</p>
+<p>Spend more time growing your business.</p>
 </div>
 
 </div>
@@ -490,7 +483,10 @@ type="text"
 placeholder="Ask Aivo something..."
 >
 
-<button onclick="askAivo()">
+<button
+id="sendButton"
+type="button"
+>
 Send
 </button>
 
@@ -501,7 +497,7 @@ Send
 </section>
 
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 
 <section class="form-section" id="contact">
 
@@ -544,32 +540,22 @@ required
 >
 
 <select name="Business Type" required>
-
-<option value="">
-What type of business?
-</option>
-
+<option value="">What type of business?</option>
 <option>Barbershop</option>
 <option>Restaurant</option>
 <option>Cleaning Business</option>
 <option>Real Estate</option>
 <option>Retail</option>
 <option>Other</option>
-
 </select>
 
 <select name="Automation" required>
-
-<option value="">
-What do you want to automate?
-</option>
-
+<option value="">What do you want to automate?</option>
 <option>Customer messages</option>
 <option>Appointment booking</option>
 <option>Phone calls</option>
 <option>Lead follow-up</option>
 <option>Other</option>
-
 </select>
 
 <textarea
@@ -592,84 +578,88 @@ Aivo will review your request and get back to you.
 </section>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+
+/* AIVO RECEPTIONIST */
+
 let bookingStep = 0;
 
 let booking = {
-  day:"",
-  time:"",
-  name:"",
-  contact:""
+  day: "",
+  time: "",
+  name: "",
+  contact: ""
 };
 
 
-function addMessage(text,user=false){
+/* ADD CHAT MESSAGE */
+
+function addMessage(text, user) {
 
   const chat = document.getElementById("chat");
 
-  const box = document.createElement("div");
+  const message = document.createElement("div");
 
-  box.className = user
+  message.className = user
     ? "message user"
     : "message bot";
 
-  box.textContent = user
+  message.textContent = user
     ? "You: " + text
     : "🤖 " + text;
 
-  chat.appendChild(box);
+  chat.appendChild(message);
 
   chat.scrollTop = chat.scrollHeight;
 }
 
 
-function askAivo(){
+/* MAIN CHAT FUNCTION */
+
+function askAivo() {
 
   const input = document.getElementById("userInput");
 
   const message = input.value.trim();
 
-  if(!message) return;
+  if (message === "") {
+    return;
+  }
 
-  addMessage(message,true);
+  addMessage(message, true);
 
-  input.value="";
+  input.value = "";
 
   const text = message.toLowerCase();
 
 
-  /* STEP 1 — DAY */
+  /* BOOKING — DAY */
 
-  if(bookingStep === 1){
+  if (bookingStep === 1) {
 
     booking.day = message;
 
     bookingStep = 2;
 
-    setTimeout(function(){
+    setTimeout(function() {
 
-      addMessage(
-        "Great! What time would you like?"
-      );
+      addMessage("Great! What time would you like?");
 
-    },400);
+    }, 400);
 
     return;
   }
 
 
-  /* STEP 2 — TIME */
+  /* BOOKING — TIME */
 
-  if(bookingStep === 2){
+  if (bookingStep === 2) {
 
     booking.time = message;
 
     bookingStep = 3;
 
-    setTimeout(function(){
+    setTimeout(function() {
 
       addMessage(
         "Perfect! " +
@@ -679,21 +669,21 @@ function askAivo(){
         ". What is your name?"
       );
 
-    },400);
+    }, 400);
 
     return;
   }
 
 
-  /* STEP 3 — NAME */
+  /* BOOKING — NAME */
 
-  if(bookingStep === 3){
+  if (bookingStep === 3) {
 
     booking.name = message;
 
     bookingStep = 4;
 
-    setTimeout(function(){
+    setTimeout(function() {
 
       addMessage(
         "Thanks, " +
@@ -701,39 +691,37 @@ function askAivo(){
         "! What is your phone number or email?"
       );
 
-    },400);
+    }, 400);
 
     return;
   }
 
 
-  /* STEP 4 — CONTACT */
+  /* BOOKING — CONTACT */
 
-  if(bookingStep === 4){
+  if (bookingStep === 4) {
 
     booking.contact = message;
 
     bookingStep = 5;
 
-    setTimeout(function(){
+    setTimeout(function() {
 
       addMessage(
         "Thanks, " +
         booking.name +
-        "! Your appointment request is ready.\n\n" +
+        "!\n\n" +
 
+        "✅ Appointment Request\n" +
         "📅 Day: " + booking.day + "\n" +
-
         "🕐 Time: " + booking.time + "\n" +
-
         "👤 Name: " + booking.name + "\n" +
-
         "📞 Contact: " + booking.contact + "\n\n" +
 
-        "✅ The business will confirm the appointment."
+        "The business will confirm the appointment."
       );
 
-    },400);
+    }, 400);
 
     return;
   }
@@ -745,17 +733,17 @@ function askAivo(){
     "I can help with hours, prices, location, services, or appointments.";
 
 
-  if(
+  if (
     text.includes("book") ||
     text.includes("appointment") ||
     text.includes("schedule")
-  ){
+  ) {
 
     booking = {
-      day:"",
-      time:"",
-      name:"",
-      contact:""
+      day: "",
+      time: "",
+      name: "",
+      contact: ""
     };
 
     bookingStep = 1;
@@ -765,86 +753,92 @@ function askAivo(){
   }
 
 
-  else if(
+  else if (
     text.includes("hour") ||
     text.includes("open") ||
     text.includes("close")
-  ){
+  ) {
 
     answer =
       "We're open Monday–Saturday from 9 AM to 7 PM.";
   }
 
 
-  else if(
+  else if (
     text.includes("price") ||
     text.includes("cost") ||
     text.includes("haircut")
-  ){
+  ) {
 
     answer =
       "Our standard haircut is $30. Ask me about booking when you're ready.";
   }
 
 
-  else if(
+  else if (
     text.includes("where") ||
     text.includes("location") ||
     text.includes("address")
-  ){
+  ) {
 
     answer =
       "We're located at 123 Main Street. This is a demo location.";
   }
 
 
-  else if(
+  else if (
     text.includes("service") ||
     text.includes("services")
-  ){
+  ) {
 
     answer =
       "We offer haircuts and barber services. I can also help you request an appointment.";
   }
 
 
-  else if(
+  else if (
     text.includes("hello") ||
     text.includes("hi")
-  ){
+  ) {
 
     answer =
       "Hi! 👋 I'm Aivo's AI receptionist. How can I help you today?";
   }
 
 
-  setTimeout(function(){
+  setTimeout(function() {
 
     addMessage(answer);
 
-  },400);
-
+  }, 400);
 }
 
 
-/* PRESS ENTER TO SEND */
+/* SEND BUTTON */
 
 document
-.getElementById("userInput")
-.addEventListener("keydown",function(event){
+  .getElementById("sendButton")
+  .addEventListener("click", askAivo);
 
-  if(event.key === "Enter"){
 
-    askAivo();
+/* ENTER KEY */
 
-  }
+document
+  .getElementById("userInput")
+  .addEventListener("keydown", function(event) {
 
-});
+    if (event.key === "Enter") {
+
+      event.preventDefault();
+
+      askAivo();
+
+    }
+
+  });
 
 </script>
 
-
-<!-- FOOTER -->
 
 <footer>
 
